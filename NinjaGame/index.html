@@ -1,0 +1,40 @@
+<html>
+    <body>
+        <div id='background'>
+            <div id='character' style='position: absolute; top:100px; left:450px; background-image: url("img/down1.png"); width:50px; height:86px;'></div>
+        </div>
+        <script type = "text/javascript">
+        var leftValue = 450, topValue = 100;
+
+        function update() {
+            document.getElementById("character").style.left = leftValue + "px";
+            document.getElementById("character").style.top = topValue + "px";
+        }
+
+        document.onkeydown = function(e) {
+            var element = document.getElementById("character");
+            var characterLocation = element.getBoundingClientRect();
+            
+            console.log(e);
+            if (e.keyCode == 37) { // LEFT
+                if (characterLocation.left >= 20) {
+                    leftValue = leftValue - 10;
+                }
+            } else if (e.keyCode == 39) { // RIGHT
+                if (characterLocation.left <= 480) {
+                leftValue = leftValue + 10;
+                }
+            } else if (e.keyCode == 40) { // DOWN
+               if (characterLocation.top <= 480) {
+                topValue = topValue + 10;
+                }
+            } else if (e.keyCode == 38) { // UP
+                if (characterLocation.top >= 20) {
+                    topValue = topValue - 10;
+                }
+            }
+            update();
+        }
+        </script>
+    </body>
+</html>

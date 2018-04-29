@@ -16,6 +16,8 @@ function setAndSwap() {
     var temp = myName;
     myName = myNumber;
     myNumber = temp; 
+
+    return;
 }
 
 // Print and Count
@@ -31,6 +33,7 @@ function printAndCount() {
         }
     }
     console.log(count);
+    return count;
 }
 
 // Print -52 to 1066
@@ -39,6 +42,7 @@ function printMinus52To1066() {
     for (i = -52; i < 1067; i++) {
         console.log(i);
     }
+    return;
 }
 
 // Multiples of Six
@@ -51,6 +55,7 @@ function multipleOfSix() {
         }
         i = i + 1;
     }
+    return;
 }
 
 // Don't Worry, Be Happy
@@ -63,6 +68,7 @@ function dontWorryBeHappy() {
         console.log("good morning!");
         i = i + 1;
     }
+    return;
 }
 
 // Counting the Dojo Way
@@ -79,6 +85,7 @@ function countingTheDojoWay() {
             console.log(i);
         }
     }
+    return;
 }
 
 // Multiples of Three - But Not All
@@ -96,6 +103,7 @@ function multiplesOfThree() {
             continue; 
         }
     }
+    return;
 }
 
 // What Do You Know?
@@ -103,6 +111,7 @@ function multiplesOfThree() {
 // incoming. Please console.log this value.
 function whatDoYouKnow(n) {
     console.log(n);
+    return;
 }
 
 // Printing Integers While
@@ -113,6 +122,7 @@ function printingIntegersWhile() {
         console.log(i);
         i = i + 1;
     }
+    return;
 }
 
 // Whoa, That Sucker's Huge
@@ -126,6 +136,7 @@ function whoaThatSuckersHuge() {
         }
     }
     console.log(sum);
+    return sum;
 }
 
 // You Say It's Your Birthday
@@ -140,6 +151,7 @@ function youSayItsYourBirthday(a, b) {
     } else {
         console.log('Just another day....');
     }
+    return;
 }
 
 // Countdown by Fours
@@ -153,6 +165,7 @@ function countdownByFours() {
         }
         n = n - 1;
     }
+    return;
 }
 
 // Leap Year
@@ -170,6 +183,7 @@ function isLeapYear(year) {
     } else {
         console.log(year + ' is not a leap year');
     }
+    return;
 }
 
 // Flexible Countdown
@@ -178,12 +192,12 @@ function isLeapYear(year) {
 // from highNum down to lowNum, using a FOR.
 // For (2,9,3), print 9 6 3 (on successive lines)
 function flexibleCountdown(lowNum, highNum, mult) {
-
     for (i = highNum; i > lowNum; i--) {
         if (i % mult === 0) {
             console.log(i);
         }
     }
+    return;
 }
 
 // The Final Countdown
@@ -192,15 +206,24 @@ function flexibleCountdown(lowNum, highNum, mult) {
 // One exception: if a multiple is equal to param4, then skip (don’t print) it. 
 // Do this using a WHILE. Given (3,5,17,9), print 6,12,15 
 /// (which are all of the multiples of 3 between 5 and 17, and excluding the value 9).
-/* function finalCountdown(param1, param2, param3, param4) {
-    while (foo ) {
+function finalCountdown(param1, param2, param3, param4) {
+    // param1 = mult, param2 = lowNum, param3 = highNum, param4 = skip it
+    var i = param2;
+    var counter = 1;
 
+    while (i < param3) {
+        if (i % param1 === 0) {
+            if (i !== param4) {
+                console.log(i);
+                // counter += 1;
+            }
+        }
 
+        i += 1;
     }
 
+    return;
 }
-
-finalCountdown(3, 5, 17, 9); */
 
 ///////////////
 // END PAGE 16

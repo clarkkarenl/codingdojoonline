@@ -234,16 +234,87 @@ function finalCountdown(param1, param2, param3, param4) {
 ////////////
 
 // Countdown
+// Create a function that accepts a number as an input. Return a new array that 
+// counts down by one, from the number (as array’s ‘zeroth’ element) down to
+//  0 (as the last element). How long is this array? 
+function countdown(num) {
+    var arrnew = [];
+    var counter = 0;
+
+    for (i = num; i > -1; i--) {
+        arrnew[counter] = i;
+        counter += 1;
+    }
+    return arrnew;
+}
 
 // Print and Return
+// Your function will receive an array with two numbers. Print the 
+// first value, and return the second.
+function printAndReturn(arr) {
+    console.log(arr[0]);
+    return(arr[1]);
+}
 
 // First Plus Length
+// Given an array, return the sum of the first value in the array, plus the 
+// array’s length. What happens if the array’s first value is not a number, 
+// but a string (like "what?") or a boolean (like false). 
+function firstPlusLength(arr) {
+    return arr[0] + arr.length;
+}
 
 // Values Greater Than Second
+// For [1,3,5,7,9,13], print values that are greater than its 2nd value. 
+// Return how many values this is. 
+function valuesGreaterThanSecond() {
+    var arr = [1, 3, 5, 7, 9, 13];
+    var arrnew = [];
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i] > arr[1]){ 
+            arrnew.push(arr[i]);
+        }
+    }
+    return arrnew.length;
+}
 
 // Values Greater Than Second, Generalized
+// Write a function that accepts any array, and returns a new array with the 
+// array values that are greater than its 2nd value. Print how many values 
+// this is. What will you do if the array is only one element long? 
+function valuesGreaterThanSecondGeneralized(arr) {
+    if (arr.length < 2) {
+        console.log('Array must contain more than one value');
+        return;
+    }
+
+    var arrnew = [];
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i] > arr[1]){ 
+            arrnew.push(arr[i]);
+        }
+    }
+    console.log(arrnew.length);
+    return arrnew.length;
+}
 
 // This Length, That Value
+// Given two numbers, return array of length num1 with each value num2. 
+// Print "Jinx!" if they are same.
+function thisLengthThatValue(num1, num2) {
+
+    if (num1 === num2) {
+        console.log('Jinx!');
+        return;
+    } 
+
+    var arrnew = [];
+    for (i = 0 ; i < num1; i++) {
+        arrnew[i] = num2;
+    }
+    console.log(arrnew);
+    return arrnew;
+}
 
 // Fit the First Value
 

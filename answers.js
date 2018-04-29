@@ -234,9 +234,9 @@ function finalCountdown(param1, param2, param3, param4) {
 ////////////
 
 // Countdown
-// Create a function that accepts a number as an input. Return a new array that 
-// counts down by one, from the number (as array’s ‘zeroth’ element) down to
-//  0 (as the last element). How long is this array? 
+// Create a function that accepts a number as an input. Return a new array 
+// that counts down by one, from the number (as array’s ‘zeroth’ element) 
+// down to 0 (as the last element). How long is this array? 
 function countdown(num) {
     var arrnew = [];
     var counter = 0;
@@ -317,10 +317,40 @@ function thisLengthThatValue(num1, num2) {
 }
 
 // Fit the First Value
+// Your function should accept an array. If value at [0] is greater than 
+// array’s length, print "Too big!"; if value at [0] is less than array’s 
+// length, print "Too small!"; otherwise print "Just right!". 
+function fitTheFirstValue(arr) {
+    if (arr.length > arr[0]) {
+        console.log('Too small!');
+    } else if (arr.length < arr[0]) {
+        console.log('Too big!');
+    } else if (arr.length === arr[0]) {
+        console.log('Just right!');
+    }
+    return;
+}
 
 // Fahrenheit to Celsius
+// Kelvin wants to convert between temperature scales. Create 
+// fahrenheitToCelsius(fDegrees) that accepts a number of degrees in 
+// Fahrenheit, and returns the equivalent temperature as expressed 
+// in Celsius degrees. For review, Fahrenheit = (9/5 * Celsius) + 32.
+function fahrenheitToCelsius(fDegrees) {
+    // C = (F - 32) × 5/9
+    celsiusDegrees = (fDegrees - 32) * 5/9;
+    return celsiusDegrees;
+}
 
 // Celsius to Fahrenheit
+// Create celsiusToFahrenheit(cDegrees) that accepts number of degrees 
+// Celsius, and returns the equivalent temperature expressed in 
+// Fahrenheit degrees
+function celsiusToFahrenheit(cDegrees) {
+    // F = (9/5 * C) + 32
+    fahrenheitDegrees = (9/5 * cDegrees) + 32;
+    return fahrenheitDegrees;
+}
 
 ///////////////
 // END PAGE 20

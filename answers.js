@@ -39,7 +39,7 @@ function printAndCount() {
 // Print -52 to 1066
 // Print integers from -52 to 1066 using a FOR loop.
 function printMinus52To1066() {
-    for (i = -52; i < 1067; i++) {
+    for (var i = -52; i < 1067; i++) {
         console.log(i);
     }
     return;
@@ -75,7 +75,7 @@ function dontWorryBeHappy() {
 // Print integers 1 to 100. If divisible by 5, print
 // "Coding" instead. If by 10, also print " Dojo".
 function countingTheDojoWay() {
-    for (i = 1; i < 101; i++) {
+    for (var i = 1; i < 101; i++) {
         if (i % 5 === 0) {
             console.log('Coding');
             if (i % 10 === 0) {
@@ -92,7 +92,7 @@ function countingTheDojoWay() {
 // Using FOR, print multiples of 3 from -300 to 0.
 // Skip -3 and -6.
 function multiplesOfThree() {
-    for (i = -301; i < 1; i++) {
+    for (var i = -301; i < 1; i++) {
         if (i === -6) {
             continue;
         } else if (i === -3) {
@@ -130,7 +130,7 @@ function printingIntegersWhile() {
 // console.log the final sum. Is there a shortcut?
 function whoaThatSuckersHuge() {
     var sum = 0;
-    for (i = -300000; i < 300001; i++) {
+    for (var i = -300000; i < 300001; i++) {
         if (i % 2 != 0) {
             sum = sum + i;
         }
@@ -192,7 +192,7 @@ function isLeapYear(year) {
 // from highNum down to lowNum, using a FOR.
 // For (2,9,3), print 9 6 3 (on successive lines)
 function flexibleCountdown(lowNum, highNum, mult) {
-    for (i = highNum; i > lowNum; i--) {
+    for (var i = highNum; i > lowNum; i--) {
         if (i % mult === 0) {
             console.log(i);
         }
@@ -241,7 +241,7 @@ function countdown(num) {
     var arrnew = [];
     var counter = 0;
 
-    for (i = num; i > -1; i--) {
+    for (var i = num; i > -1; i--) {
         arrnew[counter] = i;
         counter += 1;
     }
@@ -270,7 +270,7 @@ function firstPlusLength(arr) {
 function valuesGreaterThanSecond() {
     var arr = [1, 3, 5, 7, 9, 13];
     var arrnew = [];
-    for (i = 0; i < arr.length; i++) {
+    for (var i = 0; i < arr.length; i++) {
         if (arr[i] > arr[1]){ 
             arrnew.push(arr[i]);
         }
@@ -289,7 +289,7 @@ function valuesGreaterThanSecondGeneralized(arr) {
     }
 
     var arrnew = [];
-    for (i = 0; i < arr.length; i++) {
+    for (var i = 0; i < arr.length; i++) {
         if (arr[i] > arr[1]){ 
             arrnew.push(arr[i]);
         }
@@ -309,7 +309,7 @@ function thisLengthThatValue(num1, num2) {
     } 
 
     var arrnew = [];
-    for (i = 0 ; i < num1; i++) {
+    for (var i = 0 ; i < num1; i++) {
         arrnew[i] = num2;
     }
     console.log(arrnew);
@@ -361,32 +361,255 @@ function celsiusToFahrenheit(cDegrees) {
 ///////////
 
 // Biggie Size
+// Given an array, write a function that changes all positive 
+// numbers in the array to “big”. Example: makeItBig([-1,3,5,-5]) 
+// returns that same array, changed to [-1,"big","big",-5]. 
+function makeItBig(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] > 0) {
+            arr[i] = 'big';
+        }
+    }
+    return arr;
+}
 
 // Previous Lengths
+// You are passed an array containing strings. Working within
+// that same array, replace each string with a number – the 
+// length of the string at previous array index – 
+// and return the array.
+
+// NOTE: I'm not sure how this is supposed to work when the first 
+// value in the array is a string itself. In that case, there is no previous 
+// value.
+function previousLengths(arr) {
+    var valueLengths = [];
+
+    for (var i = 0; i < arr.length; i++) {
+        if (typeof arr[i] === 'string') {
+            valueLengths[i] = arr[i].length; 
+        } else {
+            valueLengths[i] = 0;
+        }
+    }
+
+    for (var i = 0; i < arr.length; i++) {
+        prevArrayIndex = i - 1;
+        arr[i] = valueLengths[prevArrayIndex];
+    }
+    return arr;
+}
 
 // Print Low, Return High
+// Create a function that takes array of numbers. The function 
+// should print the lowest value in the array, and return the 
+// highest value in the array.
+function printLowReturnHigh(arr) {
+    var min = arr[0];
+    var max = arr[0];
+
+    for (var i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i]
+        }
+        if (arr[i] < min) {
+            min = arr[i]
+        }
+    }
+    console.log(min);
+    return max;
+}
 
 // Add Seven to Most
+// Build function that accepts array. Return a new array with 
+// all values except first, adding 7 to each. Do not alter 
+// the original array.
+function addSevenToMost(arr) {
+    var arrnew = [];
+    for (var i = 1; i < arr.length; i++) {
+        arrnew[i - 1] = arr[i] + 7;
+    }
+    return arrnew;
+}
 
 // Print One, Return Another
+// Build a function that takes array of numbers. The function 
+// should print second-to-last value in the array, and return
+// first odd value in the array.
+function printOneReturnReturnAnother(arr) {
+    var secondToLastValue = 0;
+    var firstOddValue = 0;
+
+    secondToLastValue = arr[arr.length - 2];
+    console.log(secondToLastValue);
+
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 !== 0) {
+            firstOddValue = arr[i];
+            break;
+        }
+    }
+    return firstOddValue;    
+}
 
 // Reverse Array
+// Given array, write a function to reverse values, in-place. 
+// Example: reverse([3,1,6,4,2]) returns same array, containing 
+// [2,4,6,1,3]. 
+function reverseArray(arr){
+    var left = 0;
+    var right = 0;
+    var temp = [0];
+
+    for (left = 0, right = arr.length - 1; left < right; left++, right--) {
+        temp = arr[left];
+        arr[left] = arr[right];
+        arr[right] = temp;
+    }
+    return arr;
+}
 
 // Double Vision
+// Given array, create a function to return a new array where 
+// each value in the original has been doubled. Calling 
+// double([1,2,3]) should return [2,4,6] without changing original.
+function doubleVision(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        arr[i] = arr[i] * 2;
+    }
+    return arr;
+}
 
 // Outlook: Negative
+// Given an array, create and return a new one containing 
+// all the values of the provided array, made negative 
+// (not simply multiplied by -1). Given [1,-3,5], return 
+// [-1,-3,-5]. 
+function outlookNegative(arr) {
+    var arrnew = [];
+    for (var i = 0; i < arr.length; i++) {
+        if (Math.sign(arr[i]) === 1) {
+            arrnew[i] = -arr[i];
+        } else { 
+            arrnew[i] = arr[i];
+        }
+    }
+    return arrnew;
+}
 
 // Count Positives
+// Given array of numbers, create function to replace last 
+// value with number of positive values. Example, 
+// countPositives([-1,1,1,1])changes array to [-1,1,1,3] and returns it. 
+function countPositives(arr) {
+    var counter = 0;
+    for (var i = 0; i < arr.length; i++) {
+        if (Math.sign(arr[i]) === 1) {
+            counter += 1;
+        }
+    }
+    arr[arr.length - 1] = counter;
+    return arr;
+}
 
 // Always Hungry
+// Create a function that accepts an array, and prints "yummy"
+// each time one of the values is equal to "food". If no array 
+// elements are "food", then print "I'm hungry" once. 
+function alwaysHungry(arr) {
+    
+    var foodCounter = 0;
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] != 'food') {
+            foodCounter += 1;
+        }
+    }
+
+    if (foodCounter === arr.length) {
+        console.log("I'm hungry");
+        return;
+    }
+
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] == 'food') {
+            console.log('yummy');
+        }
+    }
+    return;
+}
 
 // Evens and Odds
+// Create a function that accepts an array. Every time that 
+// array has three odd values in a row, print "That’s odd!" 
+// Every time the array has three evens in a row, print "Even more so!"
+function evensAndOdds(arr) {
+    var evensCounter = 0;
+    var oddsCounter = 0;
+
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            evensCounter += 1;
+            oddsCounter = 0;
+            if (evensCounter === 3) {
+                console.log('Even more so!');
+                evensCounter = 0;
+            }
+        } else {
+            oddsCounter += 1;
+            evensCounter = 0;
+            if (oddsCounter === 3) {
+                console.log('Thats odd!');
+                oddsCounter = 0;
+            }
+        }
+    }
+    return;
+}
 
 // Swap Toward the Center
+// Given array, swap first and last, third and third-tolast, 
+// etc. Input[true,42,"Ada",2,"pizza"] becomes 
+// ["pizza",42,"Ada",2,true]. Change [1,2,3,4,5,6] to [6,2,4,3,5,1].
+function swapTowardTheCenter(arr) {
+    var earlier = 0;
+    var later = 0;
+
+    earlier = arr[0];
+    later = arr[arr.length - 1];
+    arr[0] = later;
+    arr[arr.length - 1] = earlier;
+
+    earlier = arr[2];
+    later = arr[arr.length - 3];
+    arr[2] = later;
+    arr[arr.length - 3] = earlier;
+
+    return arr;
+}
 
 // Increment the Seconds
+// Given arr, add 1 to odd elements ([1], [3], etc.), 
+// console.log all values and return arr. 
+function incrementTheSeconds(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 !== 0) {
+            arr[i] = arr[i] + 1;
+        }
+        console.log(arr[i]);
+    }
+    return arr;
+}
 
 // Scale the Array
+// Given array arr and number num, multiply each arr value by num, 
+// and return the changed arr.
+function scaleTheArray(arr, num) {
+    for (var i = 0; i < arr.length; i++) {
+        arr[i] = arr[i] * num;
+    }
+    console.log(arr);
+    return arr;
+}
 
 ///////////////
 // END PAGE 22

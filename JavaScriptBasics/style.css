@@ -1,49 +1,73 @@
 /* Assignment: JavaSCript Basics */
 /* Karen Clark */
 /* 2018-05-04 */
+*{
+    color: gainsboro;
+    border-radius: 15px;
+}
 #wrapper {
     background-color: darkblue;
     width: 970px;
-    height: 570px;
+    height: 690px;
+    border-radius: 0;
 }
 #header {
-    border-radius: 15px;
-    height: 50px;
-    background-color: darkred;
-    color: lightblue;
-    margin: 15px 15px;
-    padding: 15px;
-    font-size: 30px;
+    height: 60px;
+    background-color: crimson;
+    margin: 10px 15px 10px 10px;
+    padding: 10px;
+    font-size: 20px;
     text-align: left;
-    line-height: 50px;
+    line-height: 5px;
+    position: relative;
+    top: 10px;
+}
+#navigation, #main_content, #footer {
+    font-size: 14px;
 }
 #navigation {
-    border-radius: 15px;
-    width: 200px;
-    height: 250px;
-    background-color: teal;
-    color: lightseagreen;
-    margin: 15px;
-    padding: 10px;
+    background-color: darkcyan;
+    margin: 10px 10px 10px 14px;
+    padding: 8px;
     position: absolute;
 }
 #main_content {
-    width: 670px;
-    height: 400px;
-    border-radius: 15px;
-    background-color: #333333;
-    color: white;
+    width: 700px;
+    height: 500px;
+    background-color: black;
     position: relative;
+    right: 15px;
     float: right;
-    margin: 10px 10px 10px 10px;
-    padding: 20px;
+    margin: 10px 5px 5px;
+    padding: 10px 15px 15px 15px;
+}
+#footer {
+    width: 910px;
+    height: 12px;
+    background-color: grey;
+    margin: 15px 10px;
+    padding: 15px;
+    text-align: left;
+    position: relative;
+    top: -65px;
 }
 #special {
     color: cornflowerblue;
 }
+#home_link {
+    text-align: left;
+    padding: 10px 10px 0;
+}
+ul {
+    margin-left: -12px;
+}
+#li_main {
+    margin: 7px 0;
+}
 a {
    text-align: center; 
+   color: turquoise ;
 }
-ul.circle {
-    list-style-type: circle;
+#clearfix {
+    clear: right;
 }

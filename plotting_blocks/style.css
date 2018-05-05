@@ -1,0 +1,57 @@
+/*CSS reset settings here*/
+
+/* Plotting Blocks */
+/* Karen Clark */
+/* 2018-05-03 */
+
+*{
+    margin: 20px;
+    padding: 20px;
+}
+#wrapper{
+    width: 950px;
+    background-color: silver;
+    margin: 0px auto;
+}
+#header{
+    height: 150px;
+    background-color: green;
+}
+#navigation{
+    height: 300px;
+    width: 200px;
+    background-color: blue;
+    position: absolute;
+    margin: 0 0 10px 20px;
+    padding: 0;
+}
+#main_content{
+    height: 400px;
+    width: 700px;
+    background-color: red;
+    margin: 0;
+    float: right;
+    position: relative;
+    left: 5px;
+    padding: 10px;
+}
+.subcontents-1, .subcontents-2, .subcontents-3{
+    height: 200px;
+    width: 210px;
+    background-color: yellow;
+    margin: 0 10px 0 0;
+    padding: 0; 
+    float: left;
+}
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+#advertisement{
+    height: 120px;
+    width: 660px;
+    background-color: purple;
+    margin: 0 10px 0 0;
+    padding: 5px;
+}

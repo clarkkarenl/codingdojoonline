@@ -1,0 +1,69 @@
+.header {
+    background: linear-gradient(lightgrey, white);
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-auto-rows: 300px;
+    grid-auto-columns: 300px;
+    grid-gap: 30px;
+    background: radial-gradient(#6F5661, #131519);
+    font-family: Tahoma, Geneva, sans-serif;
+    padding: 10px;
+}
+
+#grid-content {
+    background: linear-gradient(to right, white, #b8bac6);
+    padding: 20px;
+    text-align: center;
+    text-justify: newspaper;
+    text-align: justify;
+    min-height: 200px;
+}
+.grid-item-1 {
+    grid-column-start: 1; 
+    grid-column-end: 1; 
+    grid-row-start: 1; 
+    grid-row-end: 1;
+}
+.grid-item-2 {
+    grid-column-start: span 2 ; 
+    grid-column-end: span 3; 
+    grid-row-start: 1; 
+    grid-row-end: 1;
+}
+.grid-item-3 {
+    grid-column-start: 1; 
+    grid-column-end: 1; 
+    grid-row-start: 2; 
+    grid-row-end: 2;
+}
+.grid-item-4 {
+    grid-column-start: 2; 
+    grid-column-end: 2; 
+    grid-row-start: 2; 
+    grid-row-end: 2;
+}
+.grid-item-5 {
+    grid-column-start: 3; 
+    grid-column-end: 3; 
+    grid-row-start: 2; 
+    grid-row-end: 2;
+}
+img {
+    border: lightgrey;
+    border-width: 1px;
+    max-width:100%;
+    max-height:100%;
+}
+h1 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-align: left;
+}
+h2 {
+    background: linear-gradient( darkgrey, grey, lightgrey);
+    color: white;
+    text-align: 5px;
+    margin: 0;
+    padding: 5px;
+}

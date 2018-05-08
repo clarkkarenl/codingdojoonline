@@ -33,6 +33,12 @@
     text-align: justify;
     margin: 10px;
 }
+#technologies {
+    width: 40px;
+    height: 40px;
+    padding: 0 2px;
+    margin: 4px;
+}
 .grid-item-1 {
     grid-column: 1; 
     grid-row: 1;
@@ -54,12 +60,26 @@
 }
 .grid-item-4 {
     grid-column: 2; 
-    grid-row: 2; 
+    grid-row: 2;
 }
 .grid-item-5 {
     grid-column: 3; 
     grid-row: 2;
 }
+.btn { 
+    display: block;
+    margin: 15px auto; 
+    padding: 3px;
+    width: 60%; 
+    box-shadow: 2px 3px #888888;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    font-size: 20px;
+
+} 
 img {
     width: 100%;
     height: auto;

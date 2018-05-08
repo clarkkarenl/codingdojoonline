@@ -1,34 +1,46 @@
-.header {
+.header, .footer {
     background: linear-gradient(lightgrey, white);
+}
+#right-align {
+    text-align: right;
+}
+.footer {
+    text-align: center;
+    font-family: Tahoma, Geneva, sans-serif;
+    margin: 0;
+}
+.logo {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    padding: 0 2px;
 }
 .wrapper {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-auto-rows: 300px;
-    grid-auto-columns: 300px;
+    grid-auto-columns: 50px;
     grid-gap: 30px;
     background: radial-gradient(#6F5661, #131519);
     font-family: Tahoma, Geneva, sans-serif;
     padding: 10px;
 }
-
 #grid-content {
     background: linear-gradient(to right, white, #b8bac6);
     padding: 20px;
-    text-align: center;
-    text-justify: newspaper;
     text-align: justify;
-    min-height: 200px;
+    text-justify: newspaper;
+    /* min-height: 200px; */
 }
 .grid-item-1 {
     grid-column-start: 1; 
-    grid-column-end: 1; 
+    grid-column-end: 1.5; 
     grid-row-start: 1; 
     grid-row-end: 1;
 }
 .grid-item-2 {
-    grid-column-start: span 2 ; 
-    grid-column-end: span 3; 
+    grid-column-start: 1.5; 
+    grid-column-end: 3; 
     grid-row-start: 1; 
     grid-row-end: 1;
 }
@@ -51,19 +63,22 @@
     grid-row-end: 2;
 }
 img {
-    border: lightgrey;
-    border-width: 1px;
-    max-width:100%;
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: 3px;
+    max-width: 120%;
     max-height:100%;
+    margin: 10px;
 }
 h1 {
     font-family: "Comic Sans MS", cursive, sans-serif;
     text-align: left;
+    padding: 5px 10px;
 }
 h2 {
     background: linear-gradient( darkgrey, grey, lightgrey);
     color: white;
     text-align: 5px;
     margin: 0;
-    padding: 5px;
+    padding: 10px;
 }

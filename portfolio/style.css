@@ -1,3 +1,6 @@
+/* Assignment: Portfolio */
+/* Karen Clark */
+/* 2018-05-07 */
 .header, .wrapper, .footer {
     max-width: 1050px;
     font-family: Tahoma, Geneva, sans-serif;
@@ -7,10 +10,12 @@
 }
 #right-align {
     text-align: right;
+    font-size: 150%;
+    margin: 20px 20px 40px;
 }
 .footer {
     text-align: center;
-    margin: 0;
+    margin: -15px;
 }
 .logo {
     width: 20px;
@@ -26,43 +31,43 @@
     background: radial-gradient(#6F5661, #131519);
     padding: 10px;
 }
-#grid-content {
+.grid-content {
     background: linear-gradient(to right, white, #b8bac6);
 }
-#grid-content > p {
+.grid-content > p {
     text-align: justify;
     margin: 10px;
 }
-#technologies {
+.technologies {
     width: 40px;
     height: 40px;
     padding: 0 2px;
     margin: 4px;
 }
-.grid-item-1 {
+#grid-item-1 {
     grid-column: 1; 
     grid-row: 1;
 }
-.grid-item-1 > img {
+#grid-item-1 > img {
     border-style: solid;
     border-color: lightgrey;
     border-width: 3px;
     width: 100%;
     height: auto;
 }
-.grid-item-2 {
+#grid-item-2 {
     grid-column: 2 / span 3; 
     grid-row: 1; 
 }
-.grid-item-3 {
+#grid-item-3 {
     grid-column: 1; 
     grid-row: 2;
 }
-.grid-item-4 {
+#grid-item-4 {
     grid-column: 2; 
     grid-row: 2;
 }
-.grid-item-5 {
+#grid-item-5 {
     grid-column: 3; 
     grid-row: 2;
 }
@@ -88,11 +93,12 @@ h1 {
     font-family: "Comic Sans MS", cursive, sans-serif;
     text-align: left;
     padding: 5px 10px;
+    margin: 0;
 }
 h2 {
     background: linear-gradient( darkgrey, grey, lightgrey);
     color: white;
-    text-align: 5px;
+    vertical-align: 5px;
     margin: 0;
     padding: 10px;
 }

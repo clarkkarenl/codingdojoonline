@@ -1,0 +1,16 @@
+* {
+    width: 100px;
+    height: 100px;
+}
+header {
+
+    margin: 20px 20px;
+    background-color: greenyellow;
+}
+nav {
+    padding: 20px 20px;
+    background-color: teal;
+}
+article {
+    border: 15px solid black;
+}

@@ -1,0 +1,20 @@
+* {
+    outline: dashed 1px red;
+}
+.wrapper {
+    width: 960px;
+    margin: 0px auto;
+    background-color: steelblue;
+    padding: 5px 5px 0px 5px; 
+}
+header img {
+    width: 287px;
+}
+.RDiv {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 500px;
+}
+header div h4 {
+    margin-top: 0px;
+}

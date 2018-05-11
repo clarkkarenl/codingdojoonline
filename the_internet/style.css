@@ -1,6 +1,7 @@
-* {
-    outline: dashed 1px red;
-}
+/* Assignment:  The Internet */
+/* Karen Clark */
+/* 2018-05-10 */
+
 .wrapper {
     width: 900px;
     margin: 0px auto;
@@ -43,7 +44,7 @@ aside p {
 }
 aside p span {
     color: steelblue;
-    text-align: wrap;
+    text-align: justify;
 }
 aside button {
     color: white;
@@ -58,27 +59,27 @@ aside .watch_video {
 aside .more_resources {
     background-color: orange;
 }
-ad {
+.ad {
     color: white;
 }
-.img_container {
+.ad .img_container {
     margin: 10px 5px;
     position: relative;
     
 }
-.img_container .background {
+.ad .img_container .background {
     width: 170px;
     position: absolute; 
     z-index: 1; 
 } 
-.img_container .foreground {
+.ad .img_container .foreground {
     width: 80px;
     position: absolute; 
     top: 70px;
     left: 43px;
     z-index: 3;
 }
-ad p {
+.ad p {
     margin: 12px;
     width: 150px;
     font-weight: bold;
@@ -86,7 +87,7 @@ ad p {
     position: absolute;
     z-index: 6;
 }
-ad button {
+.ad button {
     margin: 10px 25px 25px;
     width: 130px;
     font-weight: bold;
@@ -99,8 +100,68 @@ ad button {
     color: white;
     padding: 4px 5px;
 }
-ad button span {
+.ad button span {
     font-size: 10px;
     text-align: center;
+}
+.contact {
+    display: inline-block; 
+    margin: 0px auto;
+    margin-left: 200px;
+    padding: 0px;
 
+}
+.contact .home {
+    width: 40px;
+}
+.contact h4 {
+    display: inline-block;  
+    margin: 0px;
+    padding: 3px;
+    vertical-align: top;
+    color: steelblue;
+}
+.contact .phone {
+    width: 30px;
+    margin-left: 300px;
+    vertical-align: top;
+}
+.contact p {
+    display: inline-block;
+    font-size: 10px;
+    vertical-align: top;
+    margin: 2px;
+}
+.contact h3 {
+    display: inline-block;
+    vertical-align: top;    
+    color: mediumturquoise;
+    font-size: 200%;
+    margin: 0px 0px 0px 450px;
+}
+main {
+    color: black;
+    margin-left: 200px;
+    box-sizing: border-box;
+}
+main h4 {
+    display: inline-block;  
+    margin: 0px;
+    padding: 3px;
+    vertical-align: top;
+    color: steelblue;
+}
+main .bold {
+    font-weight: bold;
+}
+main .blue {
+    color: mediumturquoise;
+}
+main img {
+    width: 300px;
+    vertical-align: center;
+    padding: 0px 200px;
+}
+main .what_happens ul li {
+    list-style-type: decimal;
 }

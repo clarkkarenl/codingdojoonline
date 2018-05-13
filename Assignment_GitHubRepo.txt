@@ -1,0 +1,17 @@
+Assignment: GitHub Repo
+Karen Clark
+2018-05-01
+
+< used Github.com to create a new repo called "GitHubRepoAssignment" >
+Opened cmd.exe
+cd C:\Users\karen\Documents\code
+mkdir GitHubRepoAssignment
+cd GitHubRepoAssignment
+git init
+< used VSCode to create a readme.md file inside the GitHubRepoAssignment directory >
+git status
+git add readme.md
+git commit -m "Added readme file"
+git push  // < here I realized I hadn't set the remote for this repo >
+git remote add origin https://github.com/clarkkarenl/GitHubRepoAssignment.git
+git push -u origin master

@@ -1,0 +1,21 @@
+Assignment: Basic Repo
+Karen Clark
+2018-05-01
+
+< create a new repo on Github.com >
+mkdir basic_repo
+cd basic_repo
+git init
+echo "file one" > file1.txt
+echo "file two" > file2.txt
+echo "file three" > file3.txt
+git add .
+git status
+git commit -m "New repo and three text files."
+git remote add basic_repo https://github.com/clarkkarenl/basic_repo
+git push -u basic_repo master
+notepad file1.txt
+notepad file2.txt
+git add file1.txt file2.txt
+git push
+< return to GitHub.com to view basic_repo >

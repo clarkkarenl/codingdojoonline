@@ -1,0 +1,51 @@
+Assignment:  Learning to Commit
+Karen Clark
+2018-05-01
+
+COMMANDS:
+cd Desktop
+mkdir gittest
+cd gittest
+git init
+copy nul index.html
+copy nul styles.css
+copy nul aboutMe.txt
+< used VSCode to edit aboutMe.txt >
+< used VSCode to stage changes and commit them >
+git revert 2926ec376dde5a910db7349df87b8e855abb49b1
+< used VSCode to edit aboutMe.txt >
+< used VSCode to stage changes and commit them >
+git log
+
+GIT LOG OUTPUT:
+commit 2307742a7a0159b172e5806a2effee7d89c173aa (HEAD -> master)
+Author: Karen Clark <clarkkarenl@users.noreply.github.com>
+Date:   Tue May 1 19:34:23 2018 -0700
+
+    Added favorite book
+
+commit 859e89c0e786682e9cef3948e701b9a3a061ca0b
+Author: Karen Clark <clarkkarenl@users.noreply.github.com>
+Date:   Tue May 1 19:33:23 2018 -0700
+
+    Revert "added favorite movie to aboutMe"
+
+    This reverts commit 2926ec376dde5a910db7349df87b8e855abb49b1.
+
+commit 2926ec376dde5a910db7349df87b8e855abb49b1
+Author: Karen Clark <clarkkarenl@users.noreply.github.com>
+Date:   Tue May 1 19:32:20 2018 -0700
+
+    added favorite movie to aboutMe
+
+commit 9412558dcec152a363bc6c42148460b27dd95c8a
+Author: Karen Clark <clarkkarenl@users.noreply.github.com>
+Date:   Tue May 1 19:31:28 2018 -0700
+
+    Updated aboutMe
+
+commit aa778a5601bd19d478feaf6b5d69ae4fcf329459
+Author: Karen Clark <clarkkarenl@users.noreply.github.com>
+Date:   Tue May 1 19:29:28 2018 -0700
+
+    Test files for assignment

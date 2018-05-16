@@ -1,0 +1,70 @@
+/* Assignment: Simply Responsive */
+/* Karen Clark */
+/* 2018-05-15 */
+
+* {
+    outline: dashed 1px red;
+    margin: 0px;
+}
+h1 {
+    background-color: grey;
+    color: black;
+}
+p {
+    background-color: lightgrey;
+    color: black;
+}
+div {
+    background-color: lightyellow;
+    color: black;
+}
+span {
+    font-weight: bold;
+}
+
+/* Responsive stuff for final block */
+.phone_only {
+    display: none; 
+}
+.tablet_only {
+    display: none; 
+}
+.desktop_only {
+    display: none; 
+}
+
+
+@media screen and (max-width: 480px) {
+    .phone_only {
+        display: inline; 
+    }
+    .tablet_only {
+        display: none; 
+    }
+    .desktop_only {
+        display: none; 
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+    .tablet_only {
+        display: inline; 
+    }
+    .phone_only {
+        display: none; 
+    }
+    .desktop_only {
+        display: none; 
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .desktop_only {
+        display: inline; 
+    }
+    .phone_only {
+        display: none; 
+    }
+    .tablet_only {
+        display: none; 
+    }
+}

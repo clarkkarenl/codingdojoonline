@@ -1,0 +1,43 @@
+* {
+    outline: dashed 1px red;
+    margin: 0px;
+}
+.wrapper {
+    background-color: black;
+    color: yellow;
+    width: 720px;
+}
+header {
+    display: inline-block;
+    vertical-align: top;
+    width: 650px;
+    height: 100px;
+    margin: 10px 30px;
+    font-size: 350%;
+}
+main {
+    display: inline-block;
+    width: 720px;
+    vertical-align: top;
+}
+main .lcolumn {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    background-color: blue;
+    margin: 5px;
+}
+main .lcolumn .linnertop {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0px 20px;
+    width: 80%;
+    background-color: gold;
+}
+main .rtwocolumn {
+    display: inline-block;
+    vertical-align: top;
+    width: 63%;
+    background-color: green;
+    margin: 5px;
+}

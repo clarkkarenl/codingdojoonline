@@ -51,8 +51,6 @@ function replaceNegatives(arr) {
     return arr;
 }
 
-console.log(replaceNegatives([99, -99, 100, -247, 76]));
-
 
 4. Given array, and indices start and end, remove vals in that index range, working in-place (hence shortening the array).  For example, removeVals([20,30,40,50,60,70],2,4) should return [20,30,70].
 

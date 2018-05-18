@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Demo</title>
+</head>
+
+<script>
+    var n = 42;
+    var str = "A B C";
+    var booly = true;
+    console.log("Number is " + n + "!", str, booly);
+
+    function avgTemps(temps) {
+        var sum = 0;
+        for (var i = 0; i < temps.length; i++) {
+            sum += temps[i];
+        }
+        return sum/(temps.length);
+    }
+    var temps = [89, 91, 92, 88, 90];
+    console.log(temps);
+    console.log(avgTemps(temps));
+
+
+
+    // for (var i = 0; i < temps.length; i++) {
+    //     console.log(temps[i]);
+    // }
+    
+    function avgAges(employees) {
+        var sum = 0;
+        for (var i = 0; i < employees.length;i++) {
+            sum += employees[i].age;
+        }
+        return sum / (employees.length);
+    }
+
+    var employees = [{
+        name: "Phred",
+        age: 99,
+        active: true
+        },{
+        name: "Karen",
+        age: 23,
+        active: false
+        }
+    ];
+    var ages = [employees[0].age, employees[1].age];
+    console.log("Ages - ", ages);
+    // console.log(employees);
+    console.log("ONE Average age: ", avgAges(employees));
+    console.log("TWO Average age: " + avgAges(employees));
+
+</script>
+<body>
+<h1>JavaScript Demo</h1>
+    
+</body>
+</html>

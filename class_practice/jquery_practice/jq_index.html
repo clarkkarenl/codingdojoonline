@@ -10,7 +10,7 @@
         // Event listener
         $(document).ready(function() {
             $('h2').css('color', 'green');
-            $('p').click(function(){
+            $('p.click').click(function(){
 //                $('h2').fadeOut(2042);
                 $('body').append('<h1 id="NewH1">It is new!</h1>');
                 $(this).css('color', 'purple');
@@ -24,7 +24,7 @@
 </head>
 <body>
     <h2>Hello, All</h2>
-    <p>Click me!</p>
+    <p class='click'>Click me!</p>
 </body>
 
 </html>

@@ -1,0 +1,44 @@
+* {
+    /* outline: dashed 1px red; */
+    margin: 0px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 780px;
+}
+h1 {
+    color: purple;
+    text-align: center;
+    font-weight: lighter;
+}
+h2 {
+    text-align: center;
+    color: green;
+}
+.btn_txt {
+    width: 750px;
+    vertical-align:  top;
+    margin: 5px 14px;
+    
+}
+.btn_txt button {
+    background-color: lightseagreen;
+    color: black;
+    width: 120px;
+    margin: 5px;
+}
+.btn_txt p {
+    display: inline-block;
+    color: blue;
+    width: 600px;
+
+}
+.red {
+    background-color: red;
+}
+img.attr {
+    width: 250px;
+    margin-left:250px;
+}
+.btn_txt input {
+    width: 250px;
+    background-color: lightgrey;
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery-3.3.1.js"></script>
+    <title>JQuery Functions</title>
+    <script>
+        $(document).ready(function() {
+            // .addClass and .click
+            $('button.addClass').click(function () {
+                $('p.addClass').addClass('red');
+            })
+            // .after
+            $('button.after').click(function() {
+                $('p.after').after('   <i>I am now after the paragraph!</i>')
+            })
+            // .append
+            $('button.append').click(function() {
+                $('p.append').append('   <b>...I am now appended. And another thing...!</b>')
+            })
+            // .attr
+            $('button.attr').click(function() {
+                $('img.attr').attr('alt', 'cat');
+            })
+            // .before
+            $('button.before').click(function() {
+                $('p.before').before('<i>I am now before the paragraph!</i>   ')
+            })
+            // .data
+            $('button.data1').click(function() {
+                $('div.data').data('greeting', 'Hello World!');
+            })
+            $('button.data2').click(function() {
+                alert($('div.data').data('greeting'));
+            })
+            // .fadeIn and .fadeOut
+            $('button.fadeout').click(function() {
+                $('p.fadeTarget').fadeOut(1800);
+            })
+            $('button.fadein').click(function() {
+                $('p.fadeTarget').fadeIn(1800);
+            })
+            // .hide and .show
+            $('button.hide').click(function() {
+                $('p.hideShowTarget').hide();
+            })
+            $('button.show').click(function() {
+                $('p.hideShowTarget').show();
+            })
+            // .html 
+            $('button.html').click(function(){
+                $('p.html').html('<b>I am <i>brand new</i> text</b>')
+            })
+            // .slideDown and .slideUp
+            $('button.slideUp').click(function() {
+                $('p.slideTarget').slideUp();
+            })
+            $('button.slideDown').click(function() {
+                $('p.slideTarget').slideDown();
+            })
+            // .slideToggle
+            $('button.slideToggle').click(function() {
+                $('#shrug').slideToggle('slow');
+            })
+            // .text
+            $('button.text').click(function() {
+                $('p.text').text('I am brand new text!');
+            })
+            // .toggle
+            $('button.toggle').click(function() {
+                $('p.toggle').toggle();
+            })
+            // .val
+            $('button.val').click(function() {
+                $('input:text').val('Tennessee Tuxedo');
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>x-x-x-x-x JQuery Sampler x-x-x-x-x</h1>
+    <hr>
+    <h2>AddClass and Click</h2>
+    <div class='btn_txt'>
+        <button class='addClass'>AddClass</button>
+        <p class='addClass'>Click the button to add class 'red' to this paragraph</p>
+    </div>
+    <hr>
+    <h2>After</h2>
+    <div class='btn_txt'>
+            <button class='after'>After</button>
+            <p class='after'>Click the button to insert text after this paragraph</p>
+        </div>
+    <hr>
+    <h2>Append</h2>
+    <div class='btn_txt'>
+        <button class='append'>Append</button>
+        <p class='append'>Click the button to append a new paragraph</p>
+    </div>
+    <hr>
+    <h2>Attr</h2>
+    <div class='btn_txt'>
+        <button class='attr'>Attr</button>
+        <p class='attr'>Click the button to set alt tag on the image</p>
+        <img class='attr' src='img/spaghetti_cat_by_emoXpandaXbear.jpg' alt='' />
+    </div>
+    <hr>
+    <h2>Before</h2>
+    <div class='btn_txt'>
+        <button class='before'>Before</button>
+        <p class='before'>Click the button to insert text before this paragraph</p>
+    </div>
+    <hr>
+    <h2>Data</h2>
+    <div class='btn_txt'>
+        <button class='data1'>Set Data</button>
+        <button class='data2'>Get Data</button>
+        <p class='data'>Click the "Set Data" button to add data. Then click the "Get Data" button to see what was set.</p>
+        <div class='data'></div>
+    </div>
+    <hr>
+    <h2>FadeOut and FadeIn</h2>
+    <div class='btn_txt'>
+        <button class='fadeout'>FadeOut</button>
+        <button class='fadein'>FadeIn</button>
+        <p class='fadeTarget'>Click the FadeOut button to see this paragraph fade out, then click the FadeIn button to see it fade back in.</p>
+    </div>
+    <hr>
+    <h2>Hide and Show</h2>
+    <div class='btn_txt'>
+        <button class='hide'>Hide</button>
+        <button class='show'>Show</button>
+        <p class='hideShowTarget'>Click the Hide button to hide this paragraph, then click the Show button to bring it back.</p>
+    </div>
+    <hr>
+    <h2>HTML</h2>
+    <div class='btn_txt'>
+        <button class='html'>HTML</button>
+        <p class='html'>Click the button to update this text with new HTML</p>
+    </div>
+    <hr>
+    <h2>SlideDown and SlideUp</h2>
+    <div class='btn_txt'>
+        <button class='slideUp'>SlideUp</button>
+        <button class='slideDown'>SlideDown</button>
+        <p class='slideTarget'>Click the SlideUp button to make this text slide up. Then, click the SlideDown button to make the text slide back down.</p>
+    </div>
+    <hr>
+    <h2>SlideToggle</h2>
+    <div class='btn_txt'>
+        <button class='slideToggle'>Slidetoggle</button>
+        <p class='flip'>Click the button to slidetoggle a hidden image</p>
+        <div id='shrug'>¯\_(ツ)_/¯</div>
+    </div>
+    <hr>
+    <h2>Text</h2>
+    <div class='btn_txt'>
+        <button class='text'>Text</button>
+        <p class='text'>Click the button change this text.</p>
+    </div>
+    <hr>
+    <h2>Toggle</h2>
+    <div class='btn_txt'>
+        <button class='toggle'>Toggle</button>
+        <p class='toggle'>Click the button to toggle visibility of this text without any change to the content area.</p>
+    </div>
+    <hr>
+    <h2>Val</h2>
+    <div class='btn_txt'>
+        <button class='val'>Val</button>
+        <p>Name:  <input type='text' name='user'></p>
+        <p>Click the button to add a value to the input box.</p>
+    </div>
+    <hr>
+</body>
+</html>

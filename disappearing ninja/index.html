@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Disappearing Ninja -->
+<!-- Karen Clark -->
+<!-- 2018-05-20 -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery-3.3.1.js"></script>
+    <title>Disappearing Squirrels</title>
+    <script>
+        $(document).ready(function() {
+            $('div img').click(function() {
+                $(this).hide();
+            })
+            $('button.restore').click(function() {
+                $('div img').show();
+            })
+        });
+    </script>
+</head>
+<body>
+    <h1>JQuery - Disappearing Squirrels</h1>
+    <div class='container'>
+        <img id='img1' src='img/flying-squirrel-200x200.jpg' alt='squirrel' />
+        <img id='img2' src='img/flying-squirrel-200x200.jpg' alt='squirrel' />
+        <img id='img3' src='img/flying-squirrel-200x200.jpg' alt='squirrel' />
+        <img id='img4' src='img/flying-squirrel-200x200.jpg' alt='squirrel' />
+        <img id='img5' src='img/flying-squirrel-200x200.jpg' alt='squirrel' />
+        <img id='img6' src='img/flying-squirrel-200x200.jpg' alt='squirrel' />
+        <img id='img7' src='img/flying-squirrel-200x200.jpg' alt='squirrel' />
+        <img id='img8' src='img/flying-squirrel-200x200.jpg' alt='squirrel' />
+    </div> <!-- container -->
+    <button class='restore'>Restore</button>
+</body>
+</html>

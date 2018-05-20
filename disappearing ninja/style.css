@@ -1,0 +1,32 @@
+/* Disappearing Squirrels */
+/* Karen Clark */
+/* 2018-05-20 */
+
+* {
+    /* outline: dashed 1px red; */
+    margin: 0px;
+    width: 850px;
+    background-color: lightseagreen;
+}
+h1 {
+    text-align: center;
+    margin: 10px 0px;
+}
+div.container {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-gap: 10px;
+    width: 625px;
+    margin-left: 100px;
+    background: linear-gradient(to bottom, lightblue, lightseagreen);
+}
+div img {
+    width: 125px;
+}
+button {
+    color: white;
+    background-color: seagreen;
+    width: 100px;
+    padding: 4px 2px;
+    margin: 10px 10px 10px 100px;
+}

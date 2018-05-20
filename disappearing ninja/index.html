@@ -14,10 +14,10 @@
     <script>
         $(document).ready(function() {
             $('div img').click(function() {
-                $(this).hide();
+                $(this).css('visibility', 'hidden');
             })
             $('button.restore').click(function() {
-                $('div img').show();
+                $('div img').css('visibility', 'visible');
             })
         });
     </script>

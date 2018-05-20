@@ -11,51 +11,25 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="jquery-3.3.1.js"></script>
     <title>Ninja to Cat</title>
-    <script>
+    <script>            
         $('body').ready(function() {
-            $('img#idx0').click(function() {
-                if ( $('img#idx0').attr('src') === 'img/cat0.png' ) {
-                    $('img#idx0').attr('src', 'img/ninja0.png'); 
-                } else {
-                    $('img#idx0').attr('src', 'img/cat0.png');
-                }
-            })
-            $('img#idx1').click(function() {
-                if ( $('img#idx1').attr('src') === 'img/cat1.png' ) {
-                    $('img#idx1').attr('src', 'img/ninja1.png'); 
-                } else {
-                    $('img#idx1').attr('src', 'img/cat1.png');
-                }
-            })
-            $('img#idx2').click(function() {
-                if ( $('img#idx2').attr('src') === 'img/cat2.png' ) {
-                    $('img#idx2').attr('src', 'img/ninja2.png'); 
-                } else {
-                    $('img#idx2').attr('src', 'img/cat2.png');
-                }
-            })
-            $('img#idx3').click(function() {
-                if ( $('img#idx3').attr('src') === 'img/cat3.png' ) {
-                    $('img#idx3').attr('src', 'img/ninja3.png'); 
-                } else {
-                    $('img#idx3').attr('src', 'img/cat3.png');
-                }
-            })
-            $('img#idx4').click(function() {
-                if ( $('img#idx4').attr('src') === 'img/cat4.png' ) {
-                    $('img#idx4').attr('src', 'img/ninja4.png'); 
-                } else {
-                    $('img#idx4').attr('src', 'img/cat4.png');
+            $('img').click(function() {
+                if ($(this).attr('holder') == '') {
+                    $(this).attr('holder', $(this).attr('src'))
+                    $(this).attr('src', $(this).attr('data-alt-src'));
+                } else if ($(this).attr('holder').length > 0) {
+                    $(this).attr('src', $(this).attr('holder'));
+                    $(this).attr('holder', '');
                 }
             })
         });
     </script>
 </head>
 <body>
-    <img id='idx0' src='img/ninja0.png' alt='First image' />
-    <img id='idx1' src='img/ninja1.png' alt='Second image' />
-    <img id='idx2' src='img/ninja2.png' alt='Third image' />
-    <img id='idx3' src='img/ninja3.png' alt='Fourth image' />
-    <img id='idx4' src='img/ninja4.png' alt='Fifth image' />
+    <img id='idx0' src='img/ninja0.png' alt='First image' holder='' data-alt-src='img/cat0.png' />
+    <img id='idx1' src='img/ninja1.png' alt='Second image' holder='' data-alt-src='img/cat1.png' />
+    <img id='idx2' src='img/ninja2.png' alt='Third image' holder='' data-alt-src='img/cat2.png'/>
+    <img id='idx3' src='img/ninja3.png' alt='Fourth image' holder='' data-alt-src='img/cat3.png'/>
+    <img id='idx4' src='img/ninja4.png' alt='Fifth image' holder='' data-alt-src='img/cat4.png' />
 </body>
 </html>

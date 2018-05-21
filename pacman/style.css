@@ -1,0 +1,53 @@
+/* Pacman */
+/* Karen Clark */
+/* 2018-05-20 */
+
+body {
+    background-color: black;
+    margin: 0px; 
+    padding: 0px;
+}
+div.row div {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+div.brick {
+    background-color: blue;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+div.coin {
+    background: url('img/coin.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+div.empty {
+
+}
+div#pacman {
+    background: url('img/pacman.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+div#score {
+    border: 1px solid white;
+    width: 25px;
+    height: 25px;
+    color: white;
+    padding: 7px;
+    text-align: center;
+    position: absolute;
+    top: 5px;
+    left: 350px;
+}
+div.cherry {
+    background-color: transparent;
+    background: url('img/cherry.png');
+    background-repeat: no-repeat;
+    background-position: center;  
+}

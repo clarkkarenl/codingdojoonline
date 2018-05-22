@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <title>Document</title>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('h3, p').click(function() {
+                // $(this).parent().append('<h2>HOWDY FRIENDS!</h2>');
+                $(this).siblings('p').hide();
+            })
+            // $('#myDiv').children().css('background-color', 'green');
+            // $('#myDiv').children('h3').css('background-color', 'green');
+
+        })
+    
+    </script>
+</head>
+<body>
+    <div id='myDiv'>
+        <p>here is a paragraph. It is a beautiful paragraph.</p>
+        <h3>Michael Choi</h3>
+        <h3>John Supsupin</h3>
+        <h3>Tres Cool</h3>
+    </div>
+</body>
+</html>

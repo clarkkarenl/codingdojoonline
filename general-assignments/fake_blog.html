@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- Assignment: Fake Blog -->
+<!-- Karen Clark -->
+<!-- 2018-05-02 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Fake Blog</title>
+<style>
+    form {
+        font-family: 'Times New Roman', Times, serif;
+        color: darkblue;
+    }
+    body { 
+        background-color: darkgrey; 
+        font-family: 'Courier New', Courier, monospace;
+        }
+    table, th, td {
+        border: 1px solid black;
+        padding: 15px;
+    }
+    th { background-color: grey; }
+    tbody {
+        display: table-row-group;
+        vertical-align: center;
+        text-align: center ;
+        border-color: inherit;
+    }
+    h2 { color: blue;  }
+    h3 { color: blueviolet; }
+    h4 { color: darkgreen; }
+    
+</style>
+</head>
+<body>
+    <h2>Welcome to my blog!</h2>
+    <img src="https://media.licdn.com/dms/image/C5603AQFOTJSwtqvW2w/profile-displayphoto-shrink_200_200/0?e=1530748800&v=beta&t=7uJyr14dzvTclE9Ra6MIbWiuVd7E5Gnob8jvwp4nivI" alt="Karen profile pic"/>
+
+    <h3>About Me</h3>
+    <p>I am a tech-savvy, people-focused professional in game and software development. In my 15 years in tech, I've lead initiatives including:</p>
+        <ul>
+            <li>Scrum implementation & "repair" missions for smaller teams (5 - 20 people).</li>
+            <li>Master Data Management (MDM) system implementation with Customer domain mastering.</li>
+            <li>Migration of a complex support case system from Zendesk to Salesforce.com (SFDC), and subsequent improvements of the new system.</li>
+            <li>Data analytics pipeline architecture (identification, selection, and implementation of systems and front-end tools, end-user training, and integration with other systems).</li>
+            <li>Pioneering quality assurance programs for teams that previously had none.</li>
+            <li>Process improvement for technical and non-technical teams.</li>
+        </ul>
+        <p>In my free time, I enjoy playing video games, crafting, and reading.</p>
+
+    <h3>Some Stats</h3>
+    <h4>Countries I Have Visited</h4>
+    <ul>
+        <li>Switzerland</li>
+        <li>UK</li>
+        <li>Japan</li>
+        <li>Greece</li>
+        <li>Canada</li>
+    </ul>
+
+    <h4>Goals</h4>
+    <div id="goals" style="font-style: italic">
+        <p>I have some goals in life. I am working to achieve them. It's important to me to have goals.</p>
+    </div>
+    <h4>My Favorite Video Games</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>Game</th>
+                <th>Platform</th>
+                <th>Developer</th>
+                <th>Year of Release</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="https://en.wikipedia.org/wiki/Grand_Theft_Auto:_San_Andreas">Grand Theft Auto: San Andreas</a></td>
+                <td>Playstation 2</td>
+                <td>RockStar</td>
+                <td>2004</td>
+            </tr>
+            <tr>
+                <td><a href="https://en.wikipedia.org/wiki/Advanced_Dungeons_%26_Dragons:_Treasure_of_Tarmin">Advanced Dungeons and Dragons: The Treasure of Tarmin</a></td>
+                <td>Intellivision</td>
+                <td>APh Technological Consulting</td>
+                <td>1983</td>
+            </tr>
+            <tr>
+                <td><a href="https://en.wikipedia.org/wiki/Baldur%27s_Gate_II:_Shadows_of_Amn">Baldur's Gate II: Shadows of Amn</a></td>
+                <td>PC</td>
+                <td>BioWare, Inc.</td>
+                <td>2000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Take a Survey</h3>
+    <form>
+        <p><label for="email-box">Email:</label>
+        <input type="text" id="email-box" name="email-box"></p>
+
+        <p><input type="radio" name="email-radio" value="yes">Yes, please send me lots of emails
+        <input type="radio" name="email-radio" value="no" checked>No, please do not send me any emails</p>
+
+        <p><label>Check here if I can contact so we can talk about me some more</label>
+        <input type="checkbox" name="checkbox"></p>
+
+        <p><label>Select an option describing how we met:</label>
+        <select>
+                <option value="work">At work</option>
+                <option value="school">In school</option>
+                <option value="other">Somewhere else...</option>
+        </select></p>
+
+        <p><input type="submit" value="Submit"></p>
+
+    </form>
+</body>
+</html>

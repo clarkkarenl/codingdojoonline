@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Hover In/Out -->
+<!-- Karen Clark -->
+<!-- 2018-05-24 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src='jquery-3.3.1.js'></script>
+    <title>Hover In/Out</title>
+    <script>
+        $(document).ready(function() {
+            var swapImg = function() {
+                var $this = $(this);
+                var newImg = $this.data('alt-src');
+                $this.data('alt-src', $this.attr('src'));
+                $this.attr('src', newImg);
+            }
+
+            $(function () {
+                $('img.swap').hover(swapImg, swapImg);
+            });  
+        })
+
+    </script>
+</head>
+<body>
+    <img class="swap" src="img/dog1.jpeg" alt="Dog" data-alt-src="img/cat1.jpeg" />
+    <img class="swap" src="img/dog1.jpeg" alt="Dog" data-alt-src="img/cat2.jpg" />    
+    <img class="swap" src="img/dog1.jpeg" alt="Dog" data-alt-src="img/cat3.jpg" />    
+    <img class="swap" src="img/dog1.jpeg" alt="Dog" data-alt-src="img/cat4.jpg" />
+</body>
+</html>

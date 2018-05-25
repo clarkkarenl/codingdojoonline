@@ -1,0 +1,24 @@
+* {
+    /* outline: 1px dashed red; */
+    margin: 0px;
+}
+
+#starinfo {
+    border: 5px solid red;
+    width: 300px;
+    display: inline-block;
+
+}
+
+#starpeople {
+    width: 390px;
+    display: inline-block;
+}
+
+.nameplate {
+    display:inline-block;
+    vertical-align: top;
+    height: 120px;
+    width: 180px;
+    border: 1px solid black;
+}

@@ -1,4 +1,88 @@
 * {
-    outline: dashed 1px red;
+    /* outline: dashed 1px red; */
     margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+#container {
+    background-color: lightgray;
+    width: 990px;
+    height: 700px;
+    padding: 10px;
+    margin: 3px;
+}
+#top-gutter {
+    display: inline-block;
+    height: 50px;
+    width: 990px;
+    color: red;
+}
+#left-gutter {
+    display: inline-block;
+    vertical-align: top;
+    width: 17px;
+    height: 650px;
+    color: red; 
+}
+#top-section {
+    display: inline-block;
+}
+#bottom-section {
+    display: inline-block;
+    vertical-align: top;
+    height: 150px;
+}
+h5 {
+    font-weight: lighter;
+    padding: 2px;
+}
+div p, h3 {
+    color: darkblue;
+}
+h3 {
+    font-size: 14px;
+    padding: 1px 1px;
+}
+.cell {
+    display: inline-block;
+    text-align: center;
+    border: 1px solid black;
+    width: 45px;
+    height: 45px;
+    margin: 2px 1px;
+}
+#blue {
+    display: inline-block;
+    vertical-align: top;
+    width: 105px;
+    height: 360px;
+}
+#pink {
+    display: inline-block;
+    margin-top: 100px;
+    width: 520px;
+    height: 217px;
+}
+#yellow {
+    display: inline-block;
+    vertical-align: right;
+    width: 330px;
+    height: 360px;
+}
+#green {
+    display: inline-block;
+    margin-left: 130px;
+    width: 750px;
+}
+div#blue .cell {
+    background-color: cornflowerblue;
+}
+div#pink .cell {
+    background-color: salmon;
+}
+div#yellow .cell {
+    background-color: gold;
+}
+div#green .cell {
+    background-color: limegreen;
 }

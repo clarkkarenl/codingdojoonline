@@ -1,3 +1,6 @@
+/* Periodic Table */
+/* Karen Clark */
+/* 2018-05-25 */
 * {
     /* outline: dashed 1px red; */
     margin: 0px;
@@ -7,37 +10,46 @@
 #container {
     background-color: lightgray;
     width: 990px;
-    height: 700px;
+    height: 560px;
     padding: 10px;
     margin: 3px;
+    color: red;
 }
 #top-gutter {
     display: inline-block;
     height: 50px;
     width: 990px;
-    color: red;
 }
 #left-gutter {
     display: inline-block;
     vertical-align: top;
     width: 17px;
-    height: 650px;
-    color: red; 
+    height: 380px;
 }
 #top-section {
     display: inline-block;
 }
 #bottom-section {
     display: inline-block;
-    vertical-align: top;
     height: 150px;
+}
+#side-info {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    padding: 0px 0px 20px 18px;
+    margin-left: 5px;
+    margin-top: 30px;
+}
+#side-info p {
+    margin: 0px 0px 15px;
+}
+#side-info span {
+    margin: 15px 0px 15px 15px;
 }
 h5 {
     font-weight: lighter;
     padding: 2px;
-}
-div p, h3 {
-    color: darkblue;
 }
 h3 {
     font-size: 14px;
@@ -50,10 +62,12 @@ h3 {
     width: 45px;
     height: 45px;
     margin: 2px 1px;
+    color: darkblue;  
 }
 #blue {
     display: inline-block;
     vertical-align: top;
+    margin-right: 6px;
     width: 105px;
     height: 360px;
 }
@@ -65,13 +79,13 @@ h3 {
 }
 #yellow {
     display: inline-block;
-    vertical-align: right;
+    margin-left: 0px;
     width: 330px;
     height: 360px;
 }
 #green {
     display: inline-block;
-    margin-left: 130px;
+    vertical-align: top;
     width: 750px;
 }
 div#blue .cell {

@@ -9,9 +9,14 @@
     <script>
         $(document).ready(function() {
             $.get("https://pokeapi.co/api/v2/pokemon/1", function(data) {
+                var html_str = "";
+                html_str += "<h4>Types</h4>";
+                html_str += "<ul>";
                 for(var i = 0; i < data.types.length; i++) {
-                    console.log(data.types[i].type.name);
+                    html_str += "<li>" + (data.types[i].type.name) + "</li>" ;
                 }
+                html_str += "</ul>";
+                $("#bulbasaur").html(html_str);
             }, "json");
         })
     </script>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!-- Pokemon -->
+<!-- Karen Clark -->
+<!-- 2018-05-25 -->
+<html lang="en">
+<head>
+    <title>Pokemon</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src='jquery-3.3.1.js'></script>
+    <script>
+        $(document).ready(function() {
+            for(var i = 1; i < 152;i++) {
+                $('#images').append(`<img src="http://pokeapi.co/media/sprites/pokemon/${i}.png" alt="A Pokemon" />`);
+            }
+        }); // end document
+    </script>
+</head>
+<body>
+    <div id="images"></div>
+</body>
+</html>

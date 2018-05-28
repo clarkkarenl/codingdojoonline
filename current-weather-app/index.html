@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- Your Very Own Weather Forecast -->
+<!-- Karen Clark -->
+<!-- 2018-05-28 -->
+<html lang="en">
+<head>
+    <title>Your Very Own Weather Forecast</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src='jquery-3.3.1.js'></script>
+    <script>
+        function temperatureConverter(valNum) {
+            valNum = parseFloat(valNum);
+            return ((valNum - 273.15)*1.8)+32;
+        }
+
+        $(document).ready(function() {         
+            $('form').submit(function() {
+                var city = $("#city").val();
+                // end result should be like this:
+                // http://api.openweathermap.org/data/2.5/weather?q=Los%20Angeles&&appid=5e81f01fce758f25a45b488b962f294e
+                var query_url = "http://api.openweathermap.org/data/2.5/weather?q=";
+                var api_key = "5e81f01fce758f25a45b488b962f294e";
+                // TODO Add error handling in case user inputs an invalid string
+                $.get(query_url + city  + "&&appid=" + api_key, function(response) {
+                    var html_str = "";
+                    var temp = (temperatureConverter(response["main"]["temp"])).toFixed(1);
+                    // TODO find a way to use text-transform: capitalize on city value in output string
+                    $("#entry").append(`<h4>The current temperature in ${city}  is ${temp} degrees Fahrenheit</h4>`);
+                }, 'json');
+                return false;
+            })
+        }); // end document
+    </script>
+</head>
+<body>
+
+    <div id="search_bar">
+        <h4>Input the name of a city to see the current weather</h4>
+        <form>
+            <input type="text" name="city" id="city">
+            <input type="submit" class="button" value="Submit">
+        </form>
+    </div>
+    <div id="entry"></div>
+</body>
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--  What's that Pokemon? Build Your Own Pokedex -->
 <!-- Karen Clark -->
-<!-- 2018-05-25 -->
+<!-- 2018-05-27 -->
 <html lang="en">
 <head>
     <title>What's That Pokemon?</title>
@@ -12,10 +12,33 @@
     <script src='jquery-3.3.1.js'></script>
     <script>
         $(document).ready(function() {
-            // for(var i = 1; i < 152;i++) {
-            for(var i = 1; i < 100;i++) {
-                $('#images').append(`<img src="http://pokeapi.co/media/sprites/pokemon/${i}.png" alt="A Pokemon" />`);
-            }
+            // iterate through the images & create div content
+            for(var i = 1; i < 10;i++) {
+                // set an id value so we can access it later
+                $("#images").append(`<img 
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${i}.png" id="${i}" alt="A Pokemon" />
+                `);
+            };
+            // on click use the id to get the pokedex info:
+            // name, image, types, height, weight
+            $(document).on("click", "img", function() {
+                var id = $(this).attr("id");              
+                $.get("https://pokeapi.co/api/v2/pokemon/" + id, function (response) {
+                    var html_str = "";
+                    html_str += "<h2>" + response['name'] + "</h2>";
+                    html_str += '<img src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/' + id + '.png" id=' + id + 'alt="A Pokemon" />'
+                    html_str += "<h4>Types</h4>";
+                    html_str += "<ul>";
+                    for(var t = 0; t < response['types'].length; t++) {
+                        html_str += "<li>" + response['types'][t]['type']['name'] + "</li>";
+                    }
+                    html_str += "</ul>";
+                    html_str += "<h4>Height</h4> <p>" + response['height'] + "</p>";
+                    html_str += "<h4>Weight</h4> <p>" + response['weight'] + "</p>";
+
+                    $("#entry").append(html_str);
+                })
+            })
         }); // end document
     </script>
 </head>
@@ -26,7 +49,6 @@
         </div> <!-- end of sprites -->
         <div id="pokedex">
             <div id="entry">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, consequuntur molestias rem adipisci dignissimos tempora! Est totam dolorem maiores consequatur non exercitationem, molestias perspiciatis ad laboriosam. Reiciendis, culpa esse!</p>
             </div>
         </div> <!-- end of pokedex -->
     </div>

@@ -4,7 +4,6 @@
 
 # 1. Find and Replace
 # In this string: words = "It's thanksgiving day. It's my birthday,too!" print the position of the first instance of the word "day". Then create a new string where the word "day" is replaced with the word "month".
-
 words = "It's thanksgiving day. It's my birthday,too!"
 first_day = words.find("day")
 newstr = words.replace("day", "month", 1)
@@ -13,8 +12,6 @@ print newstr
 
 # 2. Min and Max
 # Print the min and max values in a list like this one: x = [2,54,-2,7,12,98]. Your code should work for any list.
-
-### TO DO!
 def min_and_max(x):
     max = x[0]
     min = x[0]
@@ -61,5 +58,3 @@ def new_list(x):
     nl.insert(0, x[:half])
 
     print nl
-
-new_list([19,2,54,-2,7,12,98,32,10,-3,6])

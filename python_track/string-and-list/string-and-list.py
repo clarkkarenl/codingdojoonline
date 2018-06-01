@@ -1,6 +1,6 @@
 # Assignment:  Python String and List Practice
 # Karen Clark
-# 2018-05-29
+# 2018-05-31
 
 # 1. Find and Replace
 # In this string: words = "It's thanksgiving day. It's my birthday,too!" print the position of the first instance of the word "day". Then create a new string where the word "day" is replaced with the word "month".
@@ -51,11 +51,9 @@ def new_list(x):
                 x[idx] = x[idx + 1]
                 x[idx + 1] = temp
 
-    print x
-
-
     # Split list in half and make a new list
     half = len(x)/2
+
     # populate new list with the second half of the list
     nl = x[half:]
 

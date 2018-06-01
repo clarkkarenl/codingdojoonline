@@ -1,0 +1,86 @@
+Practice Your Pip
+Karen Clark
+2018-05-28
+
+karen@Ariel MINGW64 ~
+$ pip install Django==1.11.9
+Collecting Django==1.11.9
+  Downloading https://files.pythonhosted.org/packages/c8/a6/291039f0ce4b9818e0399359866337e6dfe9c0e23d8d94f00e657edbfcd8/Django-1.11.9-py2.py3-none-any.whl (6.9MB)
+Requirement already satisfied: pytz in c:\python27\lib\site-packages (from Django==1.11.9) (2018.4)
+Installing collected packages: Django
+Successfully installed Django-1.11.9
+
+karen@Ariel MINGW64 ~
+$ pip list
+Package      Version
+------------ -------
+click        6.7
+Django       1.11.9
+itsdangerous 0.24
+Jinja2       2.10
+MarkupSafe   1.0
+pip          10.0.1
+pytz         2018.4
+setuptools   28.8.0
+Werkzeug     0.14.1
+
+karen@Ariel MINGW64 ~
+$ pip install Django==1.11.9
+Requirement already satisfied: Django==1.11.9 in c:\python27\lib\site-packages (1.11.9)
+Requirement already satisfied: pytz in c:\python27\lib\site-packages (from Django==1.11.9) (2018.4)
+
+karen@Ariel MINGW64 ~
+$ pip freeze
+click==6.7
+Django==1.11.9
+itsdangerous==0.24
+Jinja2==2.10
+MarkupSafe==1.0
+pytz==2018.4
+Werkzeug==0.14.1
+
+q. What's the difference between freeze and list?
+a. Pip freeze generates the list of requirements you can use for virtual environments later on
+q. What do you see when you ls? 
+a. A file called requirements.txt (along with all of my other items)
+q. What's inside this file?
+a. The contents of the pip freeze command.
+
+karen@Ariel MINGW64 ~/Desktop
+$ pip uninstall Django
+Uninstalling Django-1.11.9:
+  Would remove:
+    c:\python27\lib\site-packages\django-1.11.9.dist-info\*
+    c:\python27\lib\site-packages\django\*
+    c:\python27\scripts\django-admin.exe
+    c:\python27\scripts\django-admin.py
+
+Proceed (y/n)?   
+y
+Successfully uninstalled Django-1.11.9
+
+karen@Ariel MINGW64 ~/Desktop
+$ pip show Django
+
+karen@Ariel MINGW64 ~/Desktop
+$ pip search Flask
+Flask-OrientDB (0.1)        - A Flask extension for using OrientDB with Flask
+Flask-Pure (0.5)            - Flask-Pure - a Flask extension for Pure.css
+Flask-SimpleMDE (0.3.0)     - Flask-SimpleMDE - a Flask extension for SimpleMDE
+Fifty-Flask (1.2.0)         - Flask enhancements.
+Flask-AutoIndex (0.6)       - The mod_autoindex for Flask
+Flask-BDEA (0.1.0)          - Flask-BDEA
+Flask-Chargebee (0.0.1)     - Flask-Chargebee
+Flask-Clearbit (0.1.0)      - Flask-Clearbit
+Flask-ElasticUtils (0.1.7)  - ElasticUtils for Flask
+Flask-FileRev (0.1.0)       - Flask-FileRev
+Flask-Gears (0.2)           - Gears for Flask
+Flask-GripControl (0.0.1)   - Flask GripControl
+Flask-Helper (0.18)         - Flask Helper
+Flask-Intercom (0.1.0)      - Flask-Intercom
+Flask-Keen (0.1.0)          - Flask-Keen
+Flask-Mustache (0.4.1)      - Mustache for Flask
+Flask-NextCaller (0.1.0)    - Flask-NextCaller
+Flask-OAuthlib (0.9.5)      - OAuthlib for Flask
+
+(... truncated for length)

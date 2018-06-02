@@ -1,0 +1,26 @@
+* { 
+    outline: 1px dashed red;
+    margin: 0px;
+}
+#container {
+    background-color: tan;
+    font-family: 'Times New Roman', Times, serif;
+}
+h1 {
+    text-align: center;
+}
+header img {
+    height: 75px;
+}
+.image-container {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    padding: 5px 5px;
+}
+#odd {
+    background-color: lightblue;
+}
+#even {
+    background-color: salmon;
+}
